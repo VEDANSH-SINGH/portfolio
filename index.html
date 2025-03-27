@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedansh | Portfolio</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&family=Raleway:wght@300;400;600&display=swap">
+</head>
+<body>
+    <div class="paper">
+        <header>
+            <nav>
+                <div class="logo">Vedansh</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="home-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="handwritten">Hello, I'm Vedansh</h1>
+                    <p class="tagline">AI Researcher. Chess Enthusiast. Philosophy Explorer.</p>
+                    <div class="hero-description">
+                        <p>Currently working in Artificial Intelligence at Nxtwave, where I explore the fascinating intersection of technology and human creativity.</p>
+                        <p>My passion projects revolve around AI and philosophy connections and developing chess algorithms that challenge traditional thinking.</p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="projects.html" class="btn primary">See My Work</a>
+                        <a href="#contact" class="btn secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-doodle">
+                    <!-- Simplified SVG with triangular sections and bouncing center -->
+                    <svg class="doodle" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Circular Circumference -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#e0e0e0" stroke-width="1.5" />
+                        
+                        <!-- Main Triangle Divisions -->
+                        <path class="path main-path" d="M100,100 L40,40" stroke="#333" stroke-width="1.5" fill="none" />
+                        <path class="path main-path" d="M100,100 L160,40" stroke="#333" stroke-width="1.5" fill="none" />
+                        <path class="path main-path" d="M100,100 L100,180" stroke="#333" stroke-width="1.5" fill="none" />
+                        
+                        <!-- Colored Triangle Backgrounds (Very Light) -->
+                        <path class="triangle-bg" d="M100,100 L40,40 L160,40 Z" fill="#e5f7ff" fill-opacity="0.3" />
+                        <path class="triangle-bg" d="M100,100 L160,40 L100,180 Z" fill="#ffe5e5" fill-opacity="0.3" />
+                        <path class="triangle-bg" d="M100,100 L100,180 L40,40 Z" fill="#e5ffe5" fill-opacity="0.3" />
+                        
+                        <!-- Music Section (Top Triangle) -->
+                        <g class="music-elements">
+                            <text class="svg-text music-text" x="100" y="60" font-size="12" fill="#333" font-family="var(--handwritten-font)" text-anchor="middle">Philosophy</text>
+                        </g>
+                        
+                        <!-- Chess Section (Right Triangle) -->
+                        <g class="chess-elements">
+                            <text class="svg-text chess-text" x="130" y="110" font-size="12" fill="#333" font-family="var(--handwritten-font)" text-anchor="middle">Chess</text>
+                        </g>
+                        
+                        <!-- Code Section (Left Triangle) -->
+                        <g class="code-elements">
+                            <text class="svg-text code-text" x="60" y="110" font-size="12" fill="#333" font-family="var(--handwritten-font)" text-anchor="middle">Code</text>
+                        </g>
+                        
+                        <!-- Center Node (AI) with Bounce Animation -->
+                        <circle class="central-node" cx="100" cy="100" r="10" fill="#3a6ea5">
+                            <animate attributeName="cy" from="95" to="105" dur="2s" repeatCount="indefinite" />
+                            <animate attributeName="cx" from="98" to="102" dur="1.7s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+            </section>
+
+            <section class="about">
+                <h2 class="handwritten">About Me</h2>
+                <div class="about-content">
+                    <p>My journey in AI began with a fascination for how machines can learn patterns and create something new. At Nxtwave, I get to push the boundaries of what's possible every day.</p>
+                    <p>When I'm not coding, you'll find me analyzing chess strategies or diving into philosophical texts that examine the relationship between human cognition and artificial intelligence.</p>
+                    <p>I believe technology should enhance human creativity, not replace it. This philosophy guides my approach to every project I undertake.</p>
+                </div>
+            </section>
+
+            <section class="interests">
+                <h2 class="handwritten">What Drives Me</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <h3>AI Research</h3>
+                        <p>Exploring machine learning models that can understand and generate creative content with a focus on practical applications.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Chess</h3>
+                        <p>Analyzing game strategies and developing AI that can learn from master players while developing its own creative approaches.</p>
+                    </div>
+                    <div class="interest-card">
+                        <h3>Philosophy</h3>
+                        <p>Exploring the ethical implications of AI advancements and how philosophical frameworks can guide responsible technology development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2 class="handwritten">Let's Connect</h2>
+                <div class="contact-content">
+                    <p>Interested in collaborating or just want to chat about AI, chess, or music? Reach out and let's start a conversation!</p>
+                    <div class="contact-methods">
+                        <a href="mailto:vedansh@example.com" class="contact-link">
+                            <span class="contact-icon">✉️</span>
+                            <span>vedansh@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/vedansh" class="contact-link" target="_blank">
+                            <span class="contact-icon">👔</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/vedansh" class="contact-link" target="_blank">
+                            <span class="contact-icon">💻</span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Vedansh - Hand-crafted with <span class="heart">❤️</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html> 

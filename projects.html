@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Vedansh</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&family=Raleway:wght@300;400;600&display=swap">
+</head>
+<body>
+    <div class="paper">
+        <header>
+            <nav>
+                <div class="logo">Vedansh</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="projects-content">
+            <section class="projects-intro">
+                <h1 class="handwritten">My Projects</h1>
+                <p class="tagline">A collection of my work spanning AI, music, and chess.</p>
+            </section>
+
+            <section class="projects-grid">
+                <!-- AI Projects -->
+                <div class="project-card">
+                    <div class="project-thumbnail" style="background-color: #e5f7ff;">
+                        <svg class="doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="30" r="10" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <circle cx="30" cy="60" r="10" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <circle cx="70" cy="60" r="10" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <line x1="50" y1="40" x2="30" y2="50" stroke="#333" stroke-width="1.5"/>
+                            <line x1="50" y1="40" x2="70" y2="50" stroke="#333" stroke-width="1.5"/>
+                            <line x1="30" y1="70" x2="70" y2="70" stroke="#333" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3>NLP Sentiment Analyzer</h3>
+                        <p class="project-tags">AI / Machine Learning / Python</p>
+                        <p>A natural language processing tool that analyzes the emotional tone of text, useful for understanding customer feedback and social media sentiment.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumbnail" style="background-color: #fff0e5;">
+                        <svg class="doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20,50 C30,30 70,30 80,50 C90,70 60,85 50,70 C40,85 10,70 20,50 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <circle cx="35" cy="45" r="5" fill="#333"/>
+                            <circle cx="65" cy="45" r="5" fill="#333"/>
+                            <path d="M40,65 C45,70 55,70 60,65" fill="none" stroke="#333" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3>Facial Emotion Recognition</h3>
+                        <p class="project-tags">Computer Vision / Deep Learning / TensorFlow</p>
+                        <p>An AI system that can detect human emotions from facial expressions, with applications in UX research and accessibility.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Music Projects -->
+                <div class="project-card">
+                    <div class="project-thumbnail" style="background-color: #f0ffe5;">
+                        <svg class="doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30,30 L30,70 L32,75 M30,70 L28,75" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <path d="M50,20 L50,60 L52,65 M50,60 L48,65" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <path d="M70,40 L70,80 L72,85 M70,80 L68,85" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <line x1="20" y1="40" x2="80" y2="40" stroke="#333" stroke-width="0.5" stroke-dasharray="2,2"/>
+                            <line x1="20" y1="50" x2="80" y2="50" stroke="#333" stroke-width="0.5" stroke-dasharray="2,2"/>
+                            <line x1="20" y1="60" x2="80" y2="60" stroke="#333" stroke-width="0.5" stroke-dasharray="2,2"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Melody Generator</h3>
+                        <p class="project-tags">Music / AI / LSTM Networks</p>
+                        <p>A neural network trained on classical compositions that can generate original melodies in various styles and moods.</p>
+                        <a href="#" class="project-link">Listen Now →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumbnail" style="background-color: #f5e5ff;">
+                        <svg class="doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="30" width="60" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <rect x="25" y="35" width="10" height="30" fill="#333"/>
+                            <rect x="45" y="35" width="10" height="30" fill="#333"/>
+                            <rect x="65" y="35" width="10" height="30" fill="#333"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3>Music Style Transferer</h3>
+                        <p class="project-tags">GANs / Audio Processing / Python</p>
+                        <p>Using generative adversarial networks to transform music between different genres while preserving the original composition's structure.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Chess Projects -->
+                <div class="project-card">
+                    <div class="project-thumbnail" style="background-color: #e5e5ff;">
+                        <svg class="doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="60" height="60" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <rect x="20" y="20" width="15" height="15" fill="#333"/>
+                            <rect x="50" y="20" width="15" height="15" fill="#333"/>
+                            <rect x="35" y="35" width="15" height="15" fill="#333"/>
+                            <rect x="65" y="35" width="15" height="15" fill="#333"/>
+                            <rect x="20" y="50" width="15" height="15" fill="#333"/>
+                            <rect x="50" y="50" width="15" height="15" fill="#333"/>
+                            <rect x="35" y="65" width="15" height="15" fill="#333"/>
+                            <rect x="65" y="65" width="15" height="15" fill="#333"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chess Strategy Analyzer</h3>
+                        <p class="project-tags">Game Theory / Machine Learning / React</p>
+                        <p>An interactive tool that uses AI to analyze chess games and suggest strategic improvements based on grandmaster play styles.</p>
+                        <a href="#" class="project-link">Try It Out →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumbnail" style="background-color: #ffe5e5;">
+                        <svg class="doodle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50,20 L50,80" stroke="#333" stroke-width="1.5"/>
+                            <path d="M40,25 C40,25 50,15 60,25" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="35" rx="5" ry="7" fill="none" stroke="#333" stroke-width="1.5"/>
+                            <path d="M40,80 L60,80" stroke="#333" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <h3>Novel Opening Explorer</h3>
+                        <p class="project-tags">Chess / Data Analysis / Visualization</p>
+                        <p>A research tool that identifies creative chess openings that diverge from established theory but maintain competitive advantage.</p>
+                        <a href="#" class="project-link">Explore →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Vedansh - Hand-crafted with <span class="heart">❤️</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html> 
