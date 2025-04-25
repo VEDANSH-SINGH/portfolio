@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Foundations - Linear Algebra | Vedansh Blog</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/blog-post.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&family=Raleway:wght@300;400;600&display=swap">
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']]
+          },
+          svg: {
+            fontCache: 'global'
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vedansh</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-post-content">
+        <article>
+            <div class="post-header">
+                <a href="../blog.html" class="back-link">← Back to all posts</a>
+                <h1 class="handwritten">Math Foundations - Linear Algebra</h1>
+                <div class="post-meta">
+                    <!-- TODO: Update date when publishing -->
+                    <span class="post-date">May 3, 2025</span>
+                    <span class="post-read-time">~5 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <p class="intro"><em>"Linear algebra is the bedrock of machine learning."</em></p>
+                <p>Welcome back! In the <a href="gpt-from-scratch-intro.html">introduction</a>, we set out our goal: building a GPT-like model from scratch using NumPy. Before we dive into neural networks, we need to lay the groundwork. First stop: Linear Algebra.</p>
+                <p>Why start here? Because at its core, much of machine learning, especially deep learning, involves manipulating large arrays of numbers. Linear algebra provides the language and tools to do this efficiently. Think of it as the grammar for describing how data and model parameters interact.</p>
+
+                <h2 class="handwritten">Scalars, Vectors, Matrices, Oh My!</h2>
+                <p>Let's start with the basic building blocks:</p>
+                <ul>
+                    <li><strong>Scalar:</strong> Just a single number. Like the temperature (25°C) or the price of an apple ($1).</li>
+                    <li><strong>Vector:</strong> An ordered list of numbers. Think of it as coordinates on a map (latitude, longitude) or features of a house (bedrooms, square footage, price). We usually write vectors as a column:
+                        \[
+                        \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
+                        \]
+                    </li>
+                    <li><strong>Matrix:</strong> A rectangular grid (or table) of numbers, arranged in rows and columns. You can think of a grayscale image as a matrix where each number is a pixel's intensity, or a spreadsheet of data.
+                        \[
+                        \mathbf{A} = \begin{bmatrix}
+                        a_{11} & a_{12} & \dots & a_{1n} \\
+                        a_{21} & a_{22} & \dots & a_{2n} \\
+                        \vdots & \vdots & \ddots & \vdots \\
+                        a_{m1} & a_{m2} & \dots & a_{mn}
+                        \end{bmatrix}
+                        \]
+                        This is an \(m \times n\) matrix (m rows, n columns).
+                    </li>
+                    <li><strong>Tensor:</strong> A generalization of these concepts to more dimensions. A scalar is a 0D tensor, a vector is a 1D tensor, and a matrix is a 2D tensor. A 3D tensor could represent a color image (height, width, color channels). We won't dwell too much on tensor theory, but it's good to know the term as it's heavily used in deep learning frameworks.</li>
+                </ul>
+
+                <h2 class="handwritten">Why Do We Care? Data Representation</h2>
+                <p>In machine learning, we represent almost everything with these structures:</p>
+                <ul>
+                    <li><strong>Input Data:</strong> A sentence might be represented as a sequence of vectors (word embeddings). An image is often a matrix (grayscale) or a 3D tensor (color). A user's profile could be a vector of features.</li>
+                    <li><strong>Model Parameters:</strong> The 'knowledge' learned by a neural network is stored in matrices (often called weight matrices) and vectors (biases).</li>
+                </ul>
+                <p>Linear algebra gives us the tools to manipulate this data.</p>
+
+                <h2 class="handwritten">Key Operations</h2>
+                <p>We won't cover every operation, but let's touch on the most crucial ones for our journey:</p>
+                <ol>
+                    <li><strong>Vector/Matrix Addition:</strong> Adding corresponding elements. Simple, but useful for combining information (e.g., adding bias vectors). Requires matrices/vectors to have the same shape.</li>
+                    <li><strong>Scalar Multiplication:</strong> Multiplying every element of a vector/matrix by a single number (scalar). Used for scaling things up or down.</li>
+                    <li><strong>Dot Product (Vector-Vector):</strong> A fundamental operation. For two vectors \(\mathbf{a}\) and \(\mathbf{b}\) of the same length \(n\), the dot product is:
+                        \[ \mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + \dots + a_n b_n = \sum_{i=1}^{n} a_i b_i \]
+                        The result is a single scalar. It measures how much one vector "points" in the direction of another. In ML, it's used everywhere, especially in calculating weighted sums.
+                    </li>
+                    <li><strong>Matrix Multiplication (Matrix-Vector & Matrix-Matrix):</strong> This is the powerhouse operation.
+                        <ul>
+                            <li><strong>Matrix-Vector:</strong> Multiplying an \(m \times n\) matrix \(\mathbf{A}\) by an \(n \times 1\) vector \(\mathbf{x}\) results in an \(m \times 1\) vector \(\mathbf{y}\). Each element \(y_i\) is the dot product of the \(i\)-th row of \(\mathbf{A}\) with the vector \(\mathbf{x}\). This is how neural network layers often transform their input.
+                                \[ \mathbf{y} = \mathbf{A}\mathbf{x} \]
+                            </li>
+                            <li><strong>Matrix-Matrix:</strong> Multiplying an \(m \times n\) matrix \(\mathbf{A}\) by an \(n \times p\) matrix \(\mathbf{B}\) results in an \(m \times p\) matrix \(\mathbf{C}\). The element \(c_{ij}\) (in the \(i\)-th row, \(j\)-th column of \(\mathbf{C}\)) is the dot product of the \(i\)-th row of \(\mathbf{A}\) and the \(j\)-th column of \(\mathbf{B}\). This is crucial for combining transformations or processing batches of data.
+                                \[ \mathbf{C} = \mathbf{A}\mathbf{B} \]
+                                <em>Important:</em> The number of columns in the first matrix must equal the number of rows in the second matrix! Also, generally \(\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}\). Order matters!
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Transpose:</strong> Flipping a matrix over its main diagonal. Rows become columns and columns become rows. Denoted as \(\mathbf{A}^T\). Useful for making dimensions match up for multiplication or other operations.</li>
+                </ol>
+
+                <h2 class="handwritten">Connecting to Neural Networks</h2>
+                <p>Imagine a simple neural network layer. It takes an input vector \(\mathbf{x}\) and produces an output vector \(\mathbf{y}\). Inside the layer, there's often a weight matrix \(\mathbf{W}\) and a bias vector \(\mathbf{b}\). The core computation is frequently:
+                \[ \mathbf{y} = f(\mathbf{W}\mathbf{x} + \mathbf{b}) \]
+                Where \(f\) is an activation function (we'll cover those later). See? Matrix-vector multiplication (\(\mathbf{W}\mathbf{x}\)) and vector addition (\(+\mathbf{b}\)) are right there! Linear algebra describes the fundamental transformation happening within the layer.</p>
+
+                <p>Understanding these operations is key because when we build our GPT model, we'll be performing millions of them. NumPy will handle the calculations, but knowing what's happening conceptually is vital.</p>
+
+                <h2 class="handwritten">Next Up: Calculus</h2>
+                <p>We've seen how data and model weights are structured and transformed using linear algebra. But how do models <em>learn</em> the right weights? That's where Calculus comes in, specifically differentiation (finding slopes or gradients). Stay tuned!</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Vedansh</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

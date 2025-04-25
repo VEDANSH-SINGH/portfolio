@@ -354,52 +354,49 @@ nav {
     grid-column: 1 / -1;
 }
 
-.blog-post {
-    display: flex;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--border-color);
+/* Style for individual blog post entries on the listing page */
+.blog-post-entry {
+    margin-bottom: 2.5em;
+    padding-bottom: 2em;
+    border-bottom: 1px dashed var(--border-color);
 }
 
-.post-date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-width: 80px;
-    padding: 0.7rem;
-    background-color: white;
-    border-radius: 8px;
-    margin-right: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.blog-post-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.post-month, .post-year {
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.post-day {
+.blog-post-entry .post-title {
     font-size: 1.8rem;
-    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.blog-post-entry .post-title a {
+    color: var(--text-color);
+}
+
+.blog-post-entry .post-title a:hover {
     color: var(--primary-color);
 }
 
-.post-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
-}
-
-.post-excerpt {
-    margin-bottom: 1rem;
-}
-
-.post-meta {
+.blog-post-entry .post-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.8em;
     display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 1rem;
+    gap: 1em;
+}
+
+.blog-post-entry .post-excerpt {
+    margin-bottom: 1em;
+    color: #555;
+}
+
+.blog-post-entry .read-more {
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 0.5em;
 }
 
 .blog-sidebar {
@@ -647,4 +644,19 @@ footer {
         justify-content: center;
         gap: 0.5rem;
     }
-} 
+}
+
+/* Add this rule to your CSS file */
+
+.blog-intro .tagline {
+    font-size: 2.6rem;
+}
+
+/* You can add other styles for .blog-intro or .intro-content here */
+/* For example: */
+/*
+.blog-intro .intro-content {
+    padding: 2em 0;
+    text-align: center;
+}
+*/ 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From High School Maths -> Training GPT - Introduction | Vedansh Blog</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/blog-post.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Indie+Flower&family=Raleway:wght@300;400;600&display=swap">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vedansh</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-post-content">
+        <article>
+            <div class="post-header">
+                <a href="../blog.html" class="back-link">← Back to all posts</a>
+                <h1 class="handwritten">From High School Maths -> Training GPT - Introduction</h1>
+                <div class="post-meta">
+                    <span class="post-date">April 26, 2025</span>
+                    <span class="post-read-time">3 min read</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <p class="intro"><em>"Everything should be made as simple as possible, but not simpler."</em></p>
+                <p>You've probably seen what models like GPT can do. They write text, answer questions, even generate code. It can feel a bit like magic sometimes. But underneath all that, it's built on understandable concepts, many of which start with math you might have already seen.</p>
+                <p>So, this blog series is my attempt to walk through training GPT-like models from the ground up. We'll begin with high school math concepts and build towards a training a small GPT model. It's for anyone who wants to go beyond the surface and really grasp how these things are built, step-by-step.</p>
+
+                <h2 class="handwritten">What we would be building?</h2>
+                <p>We'll train a small GPT model to learn how to write movie dialogues, starting from random parameters.</p>
+
+                <!-- TODO: Upload the image and replace the src attribute -->
+                <figure>
+                    <img src="../assets/final_model_gen.png" alt="Sample output from the GPT model showing generated dialogue" style="width:100%; max-width: 700px; margin: 1em auto; display: block; border-radius: 8px;">
+                    <figcaption>Here is a sample output from our model</figcaption>
+                </figure>
+
+
+                <h2>Why Build From Scratch?</h2>
+                <p>Why go through the trouble of building things from scratch when powerful libraries like PyTorch or TensorFlow exist? You could just <code>import transformer</code> and get a state-of-the-art model block, right?</p>
+                <p><strong>Absolutely</strong>. And for building production systems or doing cutting-edge research, using those optimized libraries is the way to go. They handle immense complexity, run efficiently on specialized hardware (like GPUs), and save you countless hours of implementing basic components.</p>
+                <p>But our goal here isn't to build the next ChatGPT competitor overnight. <strong>Our goal is <em>understanding</em></strong>. Think of it like learning about cars. You <em>could</em> just learn to drive or you could pop the hood, maybe even try rebuilding an engine piece by piece. Doing the latter gives you a much deeper appreciation and intuition for how the whole system works, why certain parts are crucial, and what might be going wrong when it sputters.</p>
+
+                <h2>How We'll Get There</h2>
+                <p>The plan is to really get our hands dirty. <strong>We'll be building and training this model using just NumPy</strong>, steering clear of the high-level deep learning libraries.</p>
+                <p>But before we jump straight into building the model itself, we'll start with the essentials:</p>
+                <ol>
+                    <li><strong>Math Foundations:</strong> We'll revisit key ideas from <strong>Linear Algebra</strong> and <strong>Calculus</strong>, plus a bit of <strong>Probability & Statistics</strong></li>
+                    <li><strong>NumPy Basics</strong></li>
+                </ol>
+                <p>Once we've got that base covered, we'll roughly follow the below sequence:</p>
+                <ol>
+                    <li><strong>Neural Net Fundamentals</strong></li>
+                    <li><strong>Understanding Optimizers</strong></li>
+                    <li><strong>Sequence Modelling</strong></li>
+                    <li><strong>Transformer Architecture</strong></li>
+                    <li><strong>Building GPT with NumPy</strong></li>
+                    <li><strong>Training</strong></li>
+                </ol>
+
+                <h2 class="handwritten">Next Up: Math Foundations - Diving into <a href="gpt-from-scratch-linalg.html">Linear Algebra</a>.</h2>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Updated year based on blog post content -->
+            <p>© 2025 Vedansh</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
